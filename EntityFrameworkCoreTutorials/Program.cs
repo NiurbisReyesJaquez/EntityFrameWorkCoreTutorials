@@ -11,7 +11,8 @@ namespace EntityFrameworkCoreTutorials
         static void Main(string[] args)
         {
             //Crear
-            /*using (var db = new Contexto())
+            /*
+            using (var db = new Contexto())
             {
                 var curso = new Curso()
                 {
@@ -22,8 +23,8 @@ namespace EntityFrameworkCoreTutorials
 
                 var estudiante = new Estudiante()
                 {
-                    Nombre = "Juan",
-                    Apellido = "Perez",
+                    Nombre = "Niurbis",
+                    Apellido = "Reyes",
                     FechaNacimiento = DateTime.Now,
                     CursoId = 1
                 };
@@ -36,7 +37,7 @@ namespace EntityFrameworkCoreTutorials
             /*using (var db = new Contexto())
             {
                 var estudiante = db.Estudiantes.First<Estudiante>();
-                estudiante.Nombre = "Armando";
+                estudiante.Nombre = "Niurbis";
                 db.SaveChanges();
             }*/
 
@@ -51,7 +52,7 @@ namespace EntityFrameworkCoreTutorials
 
             //Consultar
             var contexto = new Contexto();
-            var estudiantesConElMismoNombre = contexto.Estudiantes.Where(s => s.Nombre == "Jose").ToList();
+            var estudiantesConElMismoNombre = contexto.Estudiantes.Where(s => s.Nombre == "Niurbis").ToList();
 
             foreach (var item in estudiantesConElMismoNombre)
             {
